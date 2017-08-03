@@ -1,8 +1,9 @@
 var initNavBar = function() {
-	var file = document.location.href.split('/').slice(-1)[0];
-	var name = "#" + file.split('.').slice()[0];
-	console.log(name);
-	$(name).addClass( "active" );
+	var anchor = $("#page");
+	console.log(anchor.html());
+	$("#" + anchor.html()).addClass( "active" );
+	// In future the following line will replace the identifier with an img tag, so that we have a custom banner on each page.
+	anchor.html("");
 };
 
 var setup = function() {
