@@ -1,7 +1,12 @@
-$( document ).ready(function()
-{
-	$( "#nav" ).load("nav.html", function()
-	{
-		$("#" + document.location.href.split('/').slice(-1)[0].split('.').slice()[0]).addClass( "active" );
-	});
-});
+var initNavBar = function() {
+	var file = document.location.href.split('/').slice(-1)[0];
+	var name = "#" + file.split('.').slice()[0];
+	console.log(name);
+	$(name).addClass( "active" );
+};
+
+var setup = function() {
+	$( "#nav" ).load("nav.html", initNavBar);
+};
+
+$( document ).ready(setup);
