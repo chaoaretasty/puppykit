@@ -13,8 +13,37 @@
 <a id="nav"></a>
 
 <div><!--Content goes here!-->
-<h3>Under construction...</h3>
+<h1>Welcome!</h1>
+<p>This is a (mostly static) website intended to collect my thoughts and much of my life into one place. This page will serve as a quick introduction to the website and details on how I put it together - partially for other people but mostly for me in case I want to do it again!</p>
+<h3>Me</h3>
+<p>My name is Sanchit Sharma, sometimes also referred to as:<ul>
+<li>San
+<li>Sam
+<li>TTIO (each letter pronounced seperately)
+<li>Puppy/Kitten/PuppyKit (hence the url)
+</ul></p>
+<p>I'm a software developer, devops person and all-round nerdy person. Head on over to my <a href="personal.html">personal page</a> for more info.</p>
+
+<h3>The Site</h3>
+<p>This website is running off a microserver sitting next to my desk. I've done everything from scratch - from hosting to the domain to writing the code myself, by hand. Mostly this has been a learning exercise - I'm not sure I would do things the same way in the future - but I do enjoy the idea that I'm able to host things from my own home!</p>
+<p>So how does it work? The code is hosted <a href="https://github.com/Sandvich/puppykit">on github</a> so feel free to browse at your leisure. The code is licensed under the Apache-2.0 license, so copy, reuse, mess around with whatever you feel like.</p>
+
+<h5>The Server</h5>
+<p>I own a <a href="https://www.hpe.com/uk/en/product-catalog/servers/proliant-servers/pip.hpe-proliant-microserver-gen8.5379860.html">HPE ProLiant MicroServer Gen8</a> which currently lives next to my desk. Aside from being a small and low-powered device, it's easily quiet enough to sit in my bedroom, which is a massive plus. Inside is currently a single 2TB spinning-platter drive, though I plan to increase that to a second for RAID and then potentially two more for increased storage.</p>
+<p>The server itself is running Fedora Server 25, and I run updates daily with an ansible playbook that manages all of my hardware. Whenever a new kernel is pushed to the repositories, I immediately install it and reboot into the new kernel.</p>
+<p>Since this site is currently running on the single server (no HA yet!), this results in relatively high downtime. For me, this is a satisfactory tradeoff as the site has little traffic at the moment.</p>
+<p>The OS has the minimum installed: Openshift, Ansible and a few other utilities aside from the basic install of Fedora Server.</p>
+
+<h5>Openshift</h5>
+<p>All my code runs in Openshift. This means everything hosted on this server. I do this for security and also a little bit for convenience. My main project (which contains this site) has a route set up inside of Openshift that forwards traffic to the primary container.</p>
+<p>That container is a simple Docker container based on the <a href="https://hub.docker.com/_/httpd/">HTTPD image</a> with my website and a slightly edited conf file inside (see <a href="https://github.com/Sandvich/puppykit/blob/master/Dockerfile">the Dockerfile</a>).</p>
+<p>Technically, Openshift is overkill for what I'm trying to do here. However, I've taken this on as a learning exercise and I expect that Openshift will be useful for some of the things that I want to host here in the future, so I've stuck with it.</p>
+
+<h5>Gandi</h5>
+<p>My registrar is <a href="www.gandi.net">Gandi</a>, although it annoys me that they spelled Ghandi wrong :p</p>
+<p>They've been pretty easy to work with and have a good corporate philosophy in my opinion. Although my mail is not currently running, I plan to use their services for it as I'm not interested in setting up a mail server from scratch just yet.</p>
 </div>
 
+<p class="copyright">Content &#9400; Sanchit Sharma 2017, code licensed under Apache-2.0</p>
 </body>
 </html>
