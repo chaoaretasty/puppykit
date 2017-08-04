@@ -40,6 +40,10 @@ ul.navbar li a {
 	text-decoration: none;
 }
 
+img {
+	display: block;
+	margin: 0 auto;
+}
 ul.navbar li a:hover:not(.active) {background-color: #111;}
 
 ul.navbar li a.active {background-color: #4CAF50;}

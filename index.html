@@ -42,6 +42,7 @@ In future I'll use it to place a custom banner on each page via the javascript.-
 <p>That container is a simple Docker container based on the <a href="https://hub.docker.com/_/httpd/">HTTPD image</a> with my website and a slightly edited conf file inside (see <a href="https://github.com/Sandvich/puppykit/blob/master/Dockerfile">the Dockerfile</a>).</p>
 <p>Technically, Openshift is overkill for what I'm trying to do here. However, I've taken this on as a learning exercise and I expect that Openshift will be useful for some of the things that I want to host here in the future, so I've stuck with it.</p>
 <p>To make my life a bit simpler, the hosts file on my dev machine allows me to directly access my server, so I can see how things differ when accessing it internally vs from the outside world.</p>
+<p>Since I don't want to allow ports other than 80 and 443 through my router, I haven't set up build hooks. This means that I have to manually build the site container when I update it, but I think this is a fair compromise as once the site is fully built it won't be updated more than once every month or so.</p>
 
 <h5>Gandi</h5>
 <p>My registrar is <a href="www.gandi.net">Gandi</a>, although it annoys me that they spelled Gandhi wrong :p</p>
