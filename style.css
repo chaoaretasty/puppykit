@@ -28,6 +28,12 @@ p.copyright {
 	color:white;
 }
 
+p.caption {
+    font-size:10px;
+    margin:0;
+    text-align: center;
+}
+
 ul.navbar {
 	list-style-type: none;
 	margin: 0;
