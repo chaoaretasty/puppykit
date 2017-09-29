@@ -147,3 +147,7 @@ table td {
     }
 
 }
+
+.pure-menu-link, .pure-menu-heading { color: #111; }
+.pure-menu-link:hover { background-color: #DDD; }
+.pure-menu-link.current { background-color: #4CAF50; }
