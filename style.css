@@ -23,9 +23,8 @@ h3 { margin: 1em 0em 0em 0em; font-size: 1em; }
 p { margin: 0em 0em 1em 0em; }
 dd { margin-bottom: 0.5em }
 
-ul, ol, dl {
-    margin: -1em 0em 0.5em 0em;
-}
+ul, ol, dl { margin: 0em 0em 0.5em 0em; }
+li > ul, li > ol { margin: 0em; }
 
 p.copyright {
 	font-size:10px;
@@ -148,6 +147,6 @@ table td {
 
 }
 
-.pure-menu-link, .pure-menu-heading { color: #111; }
+.pure-menu-link, .pure-menu-heading { color: #111; background-color: #BBB }
 .pure-menu-link:hover { background-color: #DDD; }
 .pure-menu-link.current { background-color: #4CAF50; }
