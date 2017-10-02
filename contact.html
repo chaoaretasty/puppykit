@@ -4,6 +4,7 @@
 <head>
 <title>Puppykit - Contact</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -22,7 +23,7 @@
 </p>
 
 <h2>Professional</h2>
-<iframe src="http://githubbadge.appspot.com/Sandvich" style="height: 142px;width: 200px;" frameBorder="0"></iframe>
+<iframe class="contact" src="http://githubbadge.appspot.com/Sandvich" style="height: 142px;width: 200px;" frameBorder="0"></iframe>
 <div class="LI-profile-badge center"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="sanchitsharma1"><a class="LI-simple-link" href='https://uk.linkedin.com/in/sanchitsharma1?trk=profile-badge'>LinkedIn Page</a></div>
 
 <h2>Gaming</h2>
@@ -32,7 +33,13 @@
 <div class="center"><p><a href="http://drivethrurpg.com/browse/pub/6492/Sanchit-Sharma">DriveThruRPG page</a></p></div>
 
 <h2>Email</h2>
-Contact form coming in the future!
+<form class="pure-form-stacked">
+    <label for="email_addr">Email Address</label>
+    <input type="email" id="email_addr" required><br>
+    <label for="message">Your Message</label>
+    <textarea id="message" rows="10" cols="50" required></textarea><br>
+    <button type="submit" class="pure-button pure-button-primary" disabled>Submit</button>
+</form>
 </div>
 
 <p class="copyright">Content &#9400; Sanchit Sharma 2017, code licensed under Apache-2.0</p>
